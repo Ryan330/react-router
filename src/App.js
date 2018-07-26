@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 
-import {Route, Link} from "react-router-dom"
+import {Route} from "react-router-dom";
+
+import NavBar from "./NavBar";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ul>
-
-          <li><Link to="/">Landing</Link></li>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/horseshoecrab">Horseshoe Crab</Link></li>
-          
-        </ul>
-
+        <NavBar/>
+        
         <Route path="/" exact={true} component={Landing}/>
         <Route path="/home" component={Home}/>
         <Route path="/about" component={About}/>

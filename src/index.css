@@ -1,5 +1,29 @@
+/*Webpage Init*/
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+
+/*Header Designs*/
+.customHeader {
+    height: 64;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customHeader a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.customHeader ul {
+    list-style-type: none;
 }
