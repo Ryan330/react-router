@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import {Route} from "react-router-dom";
+import {Route, Link} from "react-router-dom";
 
 import NavBar from "./NavBar";
 
@@ -14,6 +14,7 @@ class App extends Component {
         <Route path="/home" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/horseshoecrab" component={HorseShoeCrab}/>
+        <Route path="/horseshoecrab/:sub" component={Bio}/>
       </div>
     );
   }
@@ -47,7 +48,21 @@ const About = (props) => {
 const HorseShoeCrab = (props) => {
   return (
     <div>
-      <h1>Welcome to ze page of ze HorseShoeCrab!</h1>
+      <h1>Welcome to ze page of ze Horseshoe Crab!</h1>
+
+      <ul>
+        <li><Link to={`${props.match.url}/bio`}>Bio</Link></li>
+      </ul>
+
+    </div>
+  );
+}
+
+
+const Bio = (props) => {
+  return (
+    <div>
+      <h1>Horseshoe Crab: Bio</h1>
     </div>
   );
 }
